@@ -1,15 +1,22 @@
+
+
 <section>
-    <div class="card">
-        Angular
-    </div>
-    <div class="card">
-        Header
-    </div>
-    <div class="card">
-        Sidebar
-    </div>
-    <div class="card">
-        Main
+    <h1>Lista Alumnos</h1>
+    <div class="card" *ngFor="let estudiante of estudiantes">
+
+        <div *ngIf="estudiante=='Diego'; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <div ngClass="one">
+                {{estudiante | uppercase}}
+            </div>
+        </ng-template>
+        <ng-template #elseBlock>
+            <div ngClass="two">
+                {{estudiante | lowercase}}
+            </div>
+        </ng-template>
+
+        
     </div>
 </section>
 

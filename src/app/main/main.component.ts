@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+  estudiantes: string[] = ["Pedro", "Nicolas", "Diego", "Jose"];
+
 }
